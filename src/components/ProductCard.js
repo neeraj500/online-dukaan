@@ -27,12 +27,12 @@ const ProductCard = ({ product }) => {
         height={200}
         className="w-full h-24 object-contain rounded-md"
       />
-      <h2 className="text-slate-800 font-semibold mt-4">{product.title}</h2>
+      <h2 className="text-slate-800 font-semibold mt-4 font-montserrat">{product.title}</h2>
       <p className="text-gray-500">${product.price}</p>
       <div className="flex justify-center">
         <button
           onClick={handleAddToCart}
-          className="bg-gradient-to-r from-sky-100 to-sky-200 text-black font-normal hover:text-white hover:font-bold w-96 py-2 mt-4 rounded-md transition-transform transform hover:scale-105 hover:from-sky-300 hover:to-sky-600 "
+          className="btn-primary"
         >
           Add to Cart
         </button>
