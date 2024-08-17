@@ -8,9 +8,11 @@ const Header = () => {
 
   return (
     <header className="flex justify-around items-center p-4 bg-indigo-500 text-white">
+      {/* logo */}
       <h1 className="text-2xl font-bold">
         <Link href="/">Online Dukaan</Link>
       </h1>
+      {/* nav tabs */}
       <nav>
         <ul className="flex items-center space-x-8">
           <li>

@@ -4,16 +4,19 @@ import Loader from '@/app/loading';
 
 
 export default function Home() {
-  const [products, setProducts] = useState(null); // Initialize with null to check if data is loaded
+  // state for all items
+  const [products, setProducts] = useState(null); 
 
+  // open-source api to fetch items
   useEffect(() => {
     fetch('https://dummyjson.com/products')
       .then(res => res.json())
-      .then(data => setProducts(data.products)) // Directly set the products array
-      .catch(err => console.error(err)); // Handle any potential errors
+      .then(data => setProducts(data.products)) 
+      .catch(err => console.error(err)); 
   }, []);
 
  
+  // loading screen while products are being fetched
   if (!products) {
     return <Loader />;
   }
@@ -21,6 +24,7 @@ export default function Home() {
   return (
     <div className="bg-neutral-50 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
       {products.map(product => (
+        // common component for products
         <ProductCard key={product.id} product={product} />
       ))}
     </div>
