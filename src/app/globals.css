@@ -11,12 +11,12 @@
     @apply bg-gradient-to-r from-sky-100 to-sky-200 text-black font-normal hover:text-white hover:font-bold w-96 py-2 mt-4 rounded-md transition-transform transform hover:scale-105 hover:from-sky-300 hover:to-sky-600
   }
   .btn-secondary {
-    @apply bg-black text-white w-96 mt-4 py-2 rounded-lg hover:bg-zinc-800 hover:text-white hover:font-bold transition-transform transform hover:scale-105 text-center 
+    @apply bg-black text-white w-fit mt-4 py-2 px-4 rounded-lg hover:bg-zinc-800 hover:text-white hover:font-bold transition-transform transform hover:scale-105 text-center 
   }
   .btn-discount {
-    @apply text-green-500  w-fit py-2  hover:text-green-600 text-center 
+    @apply text-green-500 w-fit py-2 hover:text-green-600 text-center 
   }
   .btn-proceed-to-checkout {
-    @apply  text-white w-96 mt-4 py-2 rounded-lg hover:font-bold transition-transform transform hover:scale-105 text-center  bg-gradient-to-r from-emerald-400 to-cyan-400
+    @apply  text-white w-fit mt-4 py-2 px-4 rounded-lg hover:font-bold transition-transform transform hover:scale-105 text-center  bg-gradient-to-r from-emerald-400 to-cyan-400
   }
 }

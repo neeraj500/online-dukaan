@@ -8,7 +8,7 @@ const Checkout = () => {
         <h1 className="text-3xl font-bold mb-4 font-montserrat">Thank You for Your Purchase!</h1>
         <p className="text-gray-500 mb-6">Your order has been successfully placed.</p>
         <Link href="/">
-        <div className="btn-secondary ml-10">
+        <div className="btn-secondary ml-40">
           Return to Home
         </div>
         </Link>

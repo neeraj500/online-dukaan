@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 
 const Cart = () => {
-  const { cart, calculateTotal, clearCart,  calculateSubtotal, applyDiscount, discount } = useContext(CartContext);
+  const { cart, calculateTotal, clearCart, calculateSubtotal, applyDiscount, discount } = useContext(CartContext);
   const [discountCode, setDiscountCode] = useState("");
   const [discountMessage, setDiscountMessage] = useState("");
   const router = useRouter();
@@ -27,7 +27,7 @@ const Cart = () => {
         isValid ? "Discount applied successfully" : "Invalid Discount Code"
       );
     } else if (discountCode === "PERCENT10") {
-      // code applicable to all items
+       // code applicable to all items
       const isValid = applyDiscount(discountCode, cart);
       setDiscountMessage(
         isValid ? "Discount applied successfully" : "Invalid Discount Code"
@@ -60,7 +60,7 @@ const Cart = () => {
               ))}
             </div>
             {/* price & payment island */}
-            <div className="mt-8 p-6 rounded-lg shadow-xl inset-0  bg-white bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] border-2 border-slate-900">
+            <div className="mt-8 p-6 rounded-lg shadow-xl inset-0 bg-white bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] border-2 border-slate-900">
               <h2 className="text-xl text-black font-montserrat font-semibold mb-8">
                 Subtotal: ${calculateSubtotal().toFixed(2)}
               </h2>
@@ -105,14 +105,14 @@ const Cart = () => {
                     : ((discount.amount / 100) * calculateTotal()).toFixed(2)}
                 </p>
               )}
-            {/* total price  */}
+              {/* total price  */}
               <h2 className="text-xl text-black font-montserrat font-semibold mb-4">
                 Total: ${calculateTotal().toFixed(2)}
               </h2>
               {/* buttons */}
-              <div className="w-full flex justify-evenly flex-row-reverse gap-6">
+              <div className="w-full flex justify-center gap-6">
                 <button
-                  onClick={handleCheckout} // Checkout button action
+                  onClick={handleCheckout}
                   className="btn-proceed-to-checkout"
                 >
                   Proceed to Checkout
